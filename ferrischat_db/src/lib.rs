@@ -16,7 +16,7 @@ pub async fn load_db() -> Pool<Postgres> {
         .connect_with(
             PgConnectOptions::new()
                 .database("ferris_chat")
-                .socket(PathBuf::from("postgres:///var/run/postgresql"))
+                .socket(PathBuf::from("/var/run/postgresql/"))
                 .statement_cache_capacity(1_048_576_usize),
         )
         .await
