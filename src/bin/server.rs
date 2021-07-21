@@ -1,6 +1,6 @@
 use ferrischat_server::entrypoint;
 
 #[tokio::main]
-fn main() {
+async fn main() {
     entrypoint().await;
 }
