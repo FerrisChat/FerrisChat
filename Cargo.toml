@@ -8,9 +8,12 @@ edition = "2018"
 [workspace]
 members = [
   "ferrischat_client",
-  "ferrischat_server"
+  "ferrischat_server",
+  "ferrischat_db",
+  "ferrischat_models"
 ]
 
 [dependencies]
 ferrischat_client = { path = "ferrischat_client" }
 ferrischat_server = { path = "ferrischat_server" }
+tokio = { version = "1.8", features = ["full"]}
