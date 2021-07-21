@@ -1,1 +1,1 @@
-mod create_guild;
+pub(crate) mod create_guild;
