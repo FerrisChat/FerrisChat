@@ -17,7 +17,7 @@ async fn private_get_guild(id: u64) -> status::Custom<&'static str> {
 
 
 pub async fn entrypoint() {
-    load_db();
+    load_db().await;
 
     rocket::build()
         .mount("/api/v1/guilds", routes![private_create_guild, private_get_guild])
