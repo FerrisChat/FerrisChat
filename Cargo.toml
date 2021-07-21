@@ -12,3 +12,5 @@ members = [
 ]
 
 [dependencies]
+ferrischat_client = { path = "ferrischat_client" }
+ferrischat_server = { path = "ferrischat_server" }
