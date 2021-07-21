@@ -1,3 +1,3 @@
 pub fn entrypoint() {
-    println("client");
+    println!("client");
 }
