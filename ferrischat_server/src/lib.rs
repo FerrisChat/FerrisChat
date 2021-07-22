@@ -7,5 +7,6 @@ mod users;
 mod channels;
 mod members;
 mod messages;
+mod authentication;
 
 pub use entrypoint::*;
