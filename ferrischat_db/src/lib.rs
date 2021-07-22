@@ -24,7 +24,9 @@ pub async fn load_db() -> Pool<Postgres> {
         .await
         .expect("failed to connect to the database");
 
-    DATABASE_POOL.set(db.clone()).expect("failed to set the DB global: did you call load_db() twice?");
+    DATABASE_POOL
+        .set(db.clone())
+        .expect("failed to set the DB global: did you call load_db() twice?");
 
     db
 }

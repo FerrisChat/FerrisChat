@@ -1,11 +1,11 @@
-use crate::guilds::*;
-use crate::users::*;
 use crate::channels::*;
+use crate::guilds::*;
 use crate::members::*;
 use crate::messages::*;
+use crate::users::*;
+use ferrischat_db::load_db;
 use rocket::response::status;
 use rocket::{Ignite, Rocket};
-use ferrischat_db::load_db;
 
 #[post("/")]
 /// POST `/api/v1/guilds/`
@@ -21,65 +21,122 @@ async fn private_get_guild(id: u64) -> status::Custom<&'static str> {
 
 #[delete("/<id>/delete")]
 /// DELETE `/api/v1/guilds/<id>/delete`
-async fn private_delete_guild(id: u64) -> status::Custom<&'static str> { delete_guild(id).await }
+async fn private_delete_guild(id: u64) -> status::Custom<&'static str> {
+    delete_guild(id).await
+}
 
 #[post("/")]
 /// POST `/api/v1/users/`
-async fn private_create_user() -> status::Custom<&'static str> { create_user().await }
+async fn private_create_user() -> status::Custom<&'static str> {
+    create_user().await
+}
 
 #[get("/<id>/get")]
 /// GET `/api/v1/users/<id>/get`
-async fn private_get_user(id: u64) -> status::Custom<&'static str> { get_user(id).await }
+async fn private_get_user(id: u64) -> status::Custom<&'static str> {
+    get_user(id).await
+}
 
 #[delete("/<id>/delete")]
 /// DELETE `/api/v1/users/<id>/delete`
-async fn private_delete_user(id: u64) -> status::Custom<&'static str> { delete_user(id).await }
+async fn private_delete_user(id: u64) -> status::Custom<&'static str> {
+    delete_user(id).await
+}
 
 #[post("/")]
 /// POST `/api/v1/channels/`
-async fn private_create_channel() -> status::Custom<&'static str> { create_channel().await }
+async fn private_create_channel() -> status::Custom<&'static str> {
+    create_channel().await
+}
 
 #[get("/<id>/get")]
 /// GET `/api/v1/channels/<id>/get`
-async fn private_get_channel(id: u64) -> status::Custom<&'static str> { get_channel(id).await }
+async fn private_get_channel(id: u64) -> status::Custom<&'static str> {
+    get_channel(id).await
+}
 
 #[delete("/<id>/delete")]
 /// DELETE `/api/v1/channels/<id>/delete`
-async fn private_delete_channel(id: u64) -> status::Custom<&'static str> { delete_channel(id).await }
+async fn private_delete_channel(id: u64) -> status::Custom<&'static str> {
+    delete_channel(id).await
+}
 
 #[post("/")]
 /// POST `/api/v1/message/`
-async fn private_send_message() -> status::Custom<&'static str> { send_message().await }
+async fn private_send_message() -> status::Custom<&'static str> {
+    send_message().await
+}
 
 #[get("/<id>/get")]
 /// GET `/api/v1/message/<id>/get`
-async fn private_get_message(id: u64) -> status::Custom<&'static str> { get_message(id).await }
+async fn private_get_message(id: u64) -> status::Custom<&'static str> {
+    get_message(id).await
+}
 
 #[get("/<id>/delete")]
 /// DELETE `/api/v1/message/<id>/delete`
-async fn private_delete_message(id: u64) -> status::Custom<&'static str> { delete_message(id).await }
+async fn private_delete_message(id: u64) -> status::Custom<&'static str> {
+    delete_message(id).await
+}
 
 #[post("/")]
 /// POST `/api/v1/member/`
-async fn private_create_member() -> status::Custom<&'static str> { create_member().await }
+async fn private_create_member() -> status::Custom<&'static str> {
+    create_member().await
+}
 
 #[get("/<id>/get")]
 /// GET `/api/v1/member/<id>/get`
-async fn private_get_member(id: u64) -> status::Custom<&'static str> { get_member(id).await }
+async fn private_get_member(id: u64) -> status::Custom<&'static str> {
+    get_member(id).await
+}
 
 #[delete("/<id>/delete")]
 /// DELETE `/api/v1/member/<id>/delete`
-async fn private_delete_member(id: u64) -> status::Custom<&'static str> { delete_member(id).await }
+async fn private_delete_member(id: u64) -> status::Custom<&'static str> {
+    delete_member(id).await
+}
 
 pub async fn entrypoint() {
     load_db().await;
 
     rocket::build()
-        .mount("/api/v1/guilds", routes![private_create_guild, private_get_guild, private_delete_guild])
-        .mount("/api/v1/user", routes![private_create_user, private_get_user, private_delete_user])
-        .mount("/api/v1/channels", routes![private_create_channel, private_get_channel, private_delete_channel])
-        .mount("/api/v1/message", routes![private_send_message, private_get_message, private_delete_message])
-        .mount("/api/v1/member", routes![private_create_member, private_get_member, private_delete_member])
+        .mount(
+            "/api/v1/guilds",
+            routes![
+                private_create_guild,
+                private_get_guild,
+                private_delete_guild
+            ],
+        )
+        .mount(
+            "/api/v1/user",
+            routes![private_create_user, private_get_user, private_delete_user],
+        )
+        .mount(
+            "/api/v1/channels",
+            routes![
+                private_create_channel,
+                private_get_channel,
+                private_delete_channel
+            ],
+        )
+        .mount(
+            "/api/v1/message",
+            routes![
+                private_send_message,
+                private_get_message,
+                private_delete_message
+            ],
+        )
+        .mount(
+            "/api/v1/member",
+            routes![
+                private_create_member,
+                private_get_member,
+                private_delete_member
+            ],
+        )
         .launch()
         .await
         .expect("failed to launch rocket!")

@@ -1,11 +1,11 @@
 #[macro_use]
 extern crate rocket;
 
+mod channels;
 mod entrypoint;
 mod guilds;
-mod users;
-mod channels;
 mod members;
 mod messages;
+mod users;
 
 pub use entrypoint::*;
