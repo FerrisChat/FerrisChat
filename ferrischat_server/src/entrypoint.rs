@@ -57,23 +57,33 @@ async fn private_get_channel(id: u64) -> status::Custom<&'static str> {
 
 #[delete("/<id>/delete")]
 /// DELETE `/api/v1/channels/<id>/delete`
-async fn private_delete_channel(id: u64) -> status::Custom<&'static str> { delete_channel(id).await }
+async fn private_delete_channel(id: u64) -> status::Custom<&'static str> {
+    delete_channel(id).await
+}
 
 #[post("/<id>/send")]
 /// POST `/api/v1/channel/<id>/send`
-async fn private_send_message(id: u64) -> status::Custom<&'static str> { send_message(id).await }
+async fn private_send_message(id: u64) -> status::Custom<&'static str> {
+    send_message(id).await
+}
 
 #[get("/<id>/get")]
 /// GET `/api/v1/message/<id>/get`
-async fn private_get_message(id: u64) -> status::Custom<&'static str> { get_message(id).await }
+async fn private_get_message(id: u64) -> status::Custom<&'static str> {
+    get_message(id).await
+}
 
 #[get("/<id>/delete")]
 /// DELETE `/api/v1/message/<id>/delete`
-async fn private_delete_message(id: u64) -> status::Custom<&'static str> { delete_message(id).await }
+async fn private_delete_message(id: u64) -> status::Custom<&'static str> {
+    delete_message(id).await
+}
 
 #[post("/<id>/join")]
 /// POST `/api/v1/guilds/<id>/join`
-async fn private_join_guild(id: u64) -> status::Custom<&'static str> { create_member(id).await }
+async fn private_join_guild(id: u64) -> status::Custom<&'static str> {
+    create_member(id).await
+}
 
 #[get("/<id>/get")]
 /// GET `/api/v1/member/<id>/get`
@@ -115,17 +125,11 @@ pub async fn entrypoint() {
         )
         .mount(
             "/api/v1/message",
-            routes![
-                private_get_message,
-                private_delete_message
-            ],
+            routes![private_get_message, private_delete_message],
         )
         .mount(
             "/api/v1/member",
-            routes![
-                private_get_member,
-                private_delete_member
-            ],
+            routes![private_get_member, private_delete_member],
         )
         .launch()
         .await
