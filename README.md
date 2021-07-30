@@ -9,8 +9,10 @@ chat app ever written. But until that day arrives, this is where Ferris will ove
 the entirety of development.
 
 # Contributing
-Basically look at the issues, and see if there's something you can help with.
-Look at the issue thread and make sure no one's claimed it yet. If no one has, go
-ahead and write a comment saying you're claiming it.
+In order to contribute, please go to the separate client and server repositories.
+
+[Client](https://github.com/FerrisChat/Client) - Repository for all Frontend/Client related code
+
+[Server](https://github.com/FerrisChat/Server) - Repository for all Backend/Server related code
 
 You must run `rustfmt` **with default settings** on a PR for it to be merged.
