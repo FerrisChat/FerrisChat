@@ -16,3 +16,7 @@ In order to contribute, please go to the separate client and server repositories
 [Server](https://github.com/FerrisChat/Server) - Repository for all Backend/Server related code
 
 You must run `rustfmt` **with default settings** on a PR for it to be merged.
+
+# Temporary Discord
+
+Join us in our Discord server while we develop FerrisChat! https://discord.gg/ARwnUwWXNY
