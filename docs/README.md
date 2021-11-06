@@ -1,3 +1,1 @@
-# FerrisChat Documentation
-
-This will be added once we have an actual program
+# FerrisChat Documentation is avaliable at [docs.ferris.chat](https://docs.ferris.chat)
