@@ -8,5 +8,6 @@ These are features that we want to add before certain milestones.
 - [x] Guild create/delete/edit/join
 - [x] Channel create/delete/edit
 - [x] Message create/delete/edit
-- [] [PC native client](https://github.com/FerrisChat/client)
-- [] [Web client](https://github.com/FerrisChat/webclient)
+&NewLine;
+- [ ] [PC native client](https://github.com/FerrisChat/client)
+- [ ] [Web client](https://github.com/FerrisChat/webclient)
