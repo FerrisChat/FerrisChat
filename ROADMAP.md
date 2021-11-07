@@ -27,6 +27,7 @@ These are features that we want to add before certain milestones.
 - [ ] Ratelimiting
 - [ ] Reporting
 - [ ] Email validation
+- [ ] Password resets
 - [ ] Direct messaging
 
 ## Before API version 2
