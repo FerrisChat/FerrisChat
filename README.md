@@ -21,6 +21,10 @@ You must run `rustfmt` **with default settings** on a PR for it to be merged.
 
 [Find Docs Here](https://docs.ferris.chat)
 
+# Roadmap
+
+[https://github.com/FerrisChat/FerrisChat/blob/master/ROADMAP.md](https://github.com/FerrisChat/FerrisChat/blob/master/ROADMAP.md)
+
 # Temporary Discord
 
 Join us in our Discord server while we develop FerrisChat! https://discord.gg/ARwnUwWXNY
