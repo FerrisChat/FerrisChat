@@ -17,6 +17,10 @@ In order to contribute, please go to the separate client and server repositories
 
 You must run `rustfmt` **with default settings** on a PR for it to be merged.
 
+# Documentation
+
+[Find Docs Here](https://docs.ferris.chat)
+
 # Temporary Discord
 
 Join us in our Discord server while we develop FerrisChat! https://discord.gg/ARwnUwWXNY
