@@ -20,7 +20,6 @@ These are features that we want to add before certain milestones.
 
 ## Before API version 1
 ### Also requires ASAP goals
-- [ ] Built-in automoderation
 - [ ] Mutes, timed bans, and warnings
 - [ ] Basic interactions for the API
 - [ ] Official bot accounts and a way to manage them
@@ -34,3 +33,4 @@ These are features that we want to add before certain milestones.
 ## Before API version 2
 #### Also requires ASAP and v1 goals
 - [ ] Voice channels and calls
+- [ ] Built-in automoderation
