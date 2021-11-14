@@ -11,8 +11,9 @@ These are features that we want to add before certain milestones.
 - [ ] Kicks
 - [ ] Bans
 - [ ] Permissions
-- [ ] Roles and a role higherarchy to govern permissions
-#### clients, considered ASAP
+- [ ] Roles and a role hierarchy to govern permissions
+
+#### Clients (Considered ASAP)
 - [ ] [PC native client](https://github.com/FerrisChat/client)
 - [ ] [Web client](https://github.com/FerrisChat/webclient)
 - [ ] [iOS client](https://github.com/FerrisChat/iOS)
