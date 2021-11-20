@@ -27,7 +27,7 @@ These are features that we want to add before certain milestones.
 - [ ] Official bot accounts and a way to manage them
 - [ ] Ratelimiting
 - [ ] Reporting
-- [ ] Email validation
+- [x] Email validation
 - [ ] Password resets
 - [ ] Direct messaging
 - [ ] Localization
