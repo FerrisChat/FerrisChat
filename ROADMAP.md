@@ -16,6 +16,8 @@ These are features that we want to add before certain milestones.
 #### Clients (Considered ASAP)
 - [ ] [PC native client](https://github.com/FerrisChat/client)
 - [ ] [Web client](https://github.com/FerrisChat/webclient)
+
+#### Clients (less important)
 - [ ] [iOS client](https://github.com/FerrisChat/iOS)
 - [ ] [Android client](https://github.com/FerrisChat/Android)
 
@@ -24,7 +26,7 @@ These are features that we want to add before certain milestones.
 - [ ] Built-in automoderation
 - [ ] Mutes, timed bans, and warnings
 - [ ] Basic interactions for the API
-- [ ] Official bot accounts and a way to manage them
+- [x] Official bot accounts and a way to manage them
 - [ ] Ratelimiting
 - [ ] Reporting
 - [x] Email validation
