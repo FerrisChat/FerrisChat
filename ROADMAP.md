@@ -33,6 +33,7 @@ These are features that we want to add before certain milestones.
 - [ ] Password resets
 - [ ] Direct messaging
 - [ ] Localization
+- [ ] Search system
 
 ## Before API version 2
 #### Also requires ASAP and v1 goals
