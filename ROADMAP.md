@@ -5,13 +5,14 @@ These are features that we want to add before certain milestones.
 - [x] User create/delete/edit
 - [x] Login
 - [x] Authentication
+- [ ] TOTP/2FA auth
 - [x] Guild create/delete/edit/join
 - [x] Channel create/delete/edit
 - [x] Message create/delete/edit
 - [ ] Kicks
 - [ ] Bans
 - [ ] Permissions
-- [ ] Roles and a role hierarchy to govern permissions
+- [x] Roles and a role hierarchy to govern permissions
 
 #### Clients (Considered ASAP)
 - [ ] [PC native client](https://github.com/FerrisChat/client)
@@ -30,10 +31,11 @@ These are features that we want to add before certain milestones.
 - [ ] Ratelimiting
 - [ ] Reporting
 - [x] Email validation
-- [ ] Password resets
+- [x] Password resets
 - [ ] Direct messaging
 - [ ] Localization
 - [ ] Search system
+- [ ] OAuth2 (GitHub at bare minimum)
 
 ## Before API version 2
 #### Also requires ASAP and v1 goals
