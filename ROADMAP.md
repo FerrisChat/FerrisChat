@@ -30,6 +30,7 @@ These are features that we want to add before certain milestones.
 - [x] Official bot accounts and a way to manage them
 - [ ] Ratelimiting
 - [ ] Reporting
+- [ ] Console for platform moderation (handling reports, etc)
 - [x] Email validation
 - [x] Password resets
 - [ ] Direct messaging
